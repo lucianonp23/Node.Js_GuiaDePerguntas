@@ -1,1 +1,26 @@
-<h1>Pergunta realizada com sucesso!!</h1>
+<%- include ('partials/header.ejs') %>
+<body>
+    <%- include ('partials/navbar.ejs') %>
+               
+    <div class="container">
+
+       
+            <div class="card mt-2 text-white bg-secondary ">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h2><%= pergunta.titulo %></h2>
+                    </div>
+                    <div class="card-text">
+                        <p><%= pergunta.descricao %></p>
+                    </div>
+                    
+                </div>    
+                
+            </div>
+       
+           
+    </div>
+
+</body>
+
+<%- include ('partials/footer.ejs') %> 

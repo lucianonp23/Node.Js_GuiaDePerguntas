@@ -16,10 +16,8 @@
                     <div class="card-title">
                         <h2><%= pergunta.titulo %></h2>
                     </div>
-                    <div class="card-text">
-                        <p><%= pergunta.descricao %></p>
-                    </div>
-                    <a href="#" class="btn btn-primary">Responder</a>
+                    
+                    <a href="/pergunta/<%=pergunta.id %>" ><button class="btn btn-primary"> Responder</button></a>
                 </div>    
                 
             </div>
