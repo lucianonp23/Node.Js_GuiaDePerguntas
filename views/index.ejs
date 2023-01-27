@@ -1,10 +1,13 @@
 <%- include ('partials/header.ejs') %>
 <body>
     <%- include ('partials/navbar.ejs') %>
-    <h1>Bem vindo ao meu website</h1>
-    <hr>
-    <a href="/perguntar">Criar sua pergunta</a>
-
+    
+    <div class="container">
+       <h1>Perguntas</h1> 
+       <hr>
+       <a class="btn btn-primary" href="/perguntar">Criar sua pergunta</a>
+    </div>
+        
     <div class="container">
 
         <% perguntas.forEach(pergunta=>{ %>

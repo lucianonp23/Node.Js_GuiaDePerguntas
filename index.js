@@ -17,12 +17,28 @@ app.use(bodyParser.json());
 
 
 app.get("/",function(req,res){
-   Pergunta.findAll({raw:true}).then((perguntas)=> {
+   Pergunta.findAll({raw:true,order:[
+    ['id','DESC']
+   ]}).then((perguntas)=> {
     res.render("index",{
         perguntas:perguntas
     });
    })
     
+})
+
+app.get("/pergunta/:id", function(req,res){
+    var id= req.params.id;
+    Pergunta.findOne({
+        where:{id:id}
+    }).then(pergunta=>{
+        if(pergunta !=undefined){
+            res.render("pergunta")
+        }else{
+            res.redirect("/");
+        }
+    })
+
 })
 
 app.get("/perguntar",function(req,res){
