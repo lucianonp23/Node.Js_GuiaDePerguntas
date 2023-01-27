@@ -5,19 +5,28 @@
     <div class="container">
 
        
-            <div class="card mt-2 text-white bg-secondary ">
-                <div class="card-body">
-                    <div class="card-title">
-                        <h2><%= pergunta.titulo %></h2>
-                    </div>
-                    <div class="card-text">
-                        <p><%= pergunta.descricao %></p>
-                    </div>
-                    
-                </div>    
+        <div class="card mt-2 text-white bg-secondary ">
+            <div class="card-body">
+                <div class="card-title">
+                    <h2><%= pergunta.titulo %></h2>
+                </div>
+                <div class="card-text">
+                    <p><%= pergunta.descricao %></p>
+                </div>
                 
-            </div>
-       
+            </div>    
+            
+        </div>
+        <div class="card-body mt-2">
+            <form  action="">
+                <h3>Responda</h3>
+                <label >Resposta:</label>
+                <textarea class="form-control"  placeholder="Digite aqui a sua resposta" name="resposta"></textarea>
+                <button type="submit" class="btn btn-success mt-2">Responder</button>
+                <input name="pergunta" type="hidden" value="<%= pergunta.id%>">
+            </form>   
+        </div>
+        
            
     </div>
 
