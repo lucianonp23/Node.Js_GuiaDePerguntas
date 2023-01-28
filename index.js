@@ -44,15 +44,15 @@ app.get("/pergunta/:id", function(req,res){
 
 })
 
-app.get("/responder",function(req,res){
+app.post("/responder",function(req,res){
     var corpo=req.body.resposta;
     var perguntaId= req.body.pergunta;
 
     Respostas.create({
-        corpo:corpo,
-        perguntaId:perguntaId
+        corpo: corpo,
+        perguntaId: perguntaId
     }).then(()=>{
-        res.redirect("/pergunta"+perguntaId);
+        res.redirect("/pergunta/"+perguntaId);
     })
 })
 

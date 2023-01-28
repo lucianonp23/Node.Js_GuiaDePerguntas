@@ -18,12 +18,12 @@
             
         </div>
         <div class="card-body mt-2">
-            <form  action="">
+            <form  method="POST" action="/responder" >
                 <h3>Responda</h3>
                 <label >Resposta:</label>
                 <textarea class="form-control"  placeholder="Digite aqui a sua resposta" name="resposta"></textarea>
-                <button type="submit" class="btn btn-success mt-2">Responder</button>
                 <input name="pergunta" type="hidden" value="<%= pergunta.id%>">
+                <button type="submit" class="btn btn-success mt-2">Responder</button>
             </form>   
         </div>
         
