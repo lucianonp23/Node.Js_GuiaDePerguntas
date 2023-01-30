@@ -24,8 +24,19 @@
                 <textarea class="form-control"  placeholder="Digite aqui a sua resposta" name="resposta"></textarea>
                 <input name="pergunta" type="hidden" value="<%= pergunta.id%>">
                 <button type="submit" class="btn btn-success mt-2">Responder</button>
-            </form>   
+            </form>
+            
         </div>
+        <hr>
+        <h3>Respostas encontradas:</h3>
+            <%respostas.forEach(resposta=>{ %>
+                <div class="card mt-2  bg-light">
+                    <div class="card-body">
+                        <p><%=resposta.corpo%></p>
+                    </div>
+                </div>
+            <%})%>
+
         
            
     </div>
